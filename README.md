@@ -1,8 +1,10 @@
 # Knowledge-Distillation
 
 ### 0. Overview
-This repository contains a simple implementation of **[Distilling the Knowledge in a Neural Network](https://arxiv.org/pdf/1503.02531.pdf) (NIPS, 2014)** using PyTorch
-Knowledge Distillation is abbreviated as KD from below. VGG19 with Batch Normalization network serves as a teacher network. The dataset used here is CIFAR dataset. Please note that the results may vary, depending on a set of hyper-parameters.
+This repository contains a simple implementation of **[Distilling the Knowledge in a Neural Network](https://arxiv.org/pdf/1503.02531.pdf) (NIPS, 2014)** using PyTorch.
+Knowledge Distillation is abbreviated as KD from below. A teacher network is the VGG19 with Batch Normalization network and a student model is a simple custom CNN network. The dataset used here is CIFAR dataset. 
+
+Please note that the results may vary, depending on a set of hyper-parameters.
 
 
 ### 1. Quantitative Evaluation
@@ -31,7 +33,7 @@ Knowledge Distillation is abbreviated as KD from below. VGG19 with Batch Normali
 You should have a pre-trained teacher network in order to train a student network with KD. </br>
 a) Train Teacher Network. 
 ```
-python train.py --tto True` </br>
+python train.py --tto True
 ```
 
 Then compare the performance between training the student network alone and distilling knowledge from teacher network to student network.
